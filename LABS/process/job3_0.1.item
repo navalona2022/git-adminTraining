@@ -2,6 +2,8 @@
   <context confirmationNeeded="false" name="Default"/>
   <parameters>
     <elementParameter field="CLOSED_LIST" name="LOG4J_RUN_LEVEL" show="false" value="Info"/>
+    <elementParameter field="TEXT" name="SCREEN_OFFSET_X" show="false" value="0"/>
+    <elementParameter field="TEXT" name="SCREEN_OFFSET_Y" show="false" value="0"/>
     <elementParameter field="TEXT" name="REPOSITORY_CONNECTION_ID" show="false" value=""/>
     <elementParameter field="TEXT" name="OOZIE_PROPERTY_TYPENAME" show="false" value=""/>
     <elementParameter field="TEXT" name="OOZIE_HADOOP_DISTRIBUTION" show="false" value=""/>
@@ -106,13 +108,90 @@
     <routinesParameter id="_EsXJwILzEe6HSemwQylZ4g" name="TalendStringUtil"/>
     <routinesParameter id="_EroxAILzEe6HSemwQylZ4g" name="TalendString"/>
   </parameters>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_9cc8508b-bc1d-4216-b924-45b123ef951f"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>tpmOZ/8v0mGhTiIu/vQnPGnin6iGEg4sgDiXh73ft+DkVIwS7ugVu1GmSJ0Piz3dvXJGwHodpyTV&#13;
-U43Uxs1y8g==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_3b7dada7-8672-4d70-ad84-d65469e215cf"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>gV5s7qBU2ox+mdp29ig5wK1tTjF3+4kkvR6OuivsgMvCCixnCgXo0VJ56jnvkigoIKghiAmnv+1V&#13;
-VptnWou1Bg==</DigestValue></Reference></SignedInfo><SignatureValue>dbeB0Tf+wV7p7DIKFXkMzi50ItB3e2sSs16Aq8ilsIgyJcKHoJW3xaSs+QTmEqjxa3SgIR0rW+x/&#13;
-tXUn1kvtgyzZytEymIjg+5dJ0Yp+lHcC4kvZfG4rdVNxl3xIEzT6T4YVuGZAsbr1AgB2jkCXG5AQ&#13;
-ED+62kg7vqWcHv21HvuTxTInna8k7uTYwtEEPQJBMAx5r5mgtojTaZTXOyoF9ZMwc7D65BcmOGRx&#13;
-m2yWNNxXTJlUk8GW+rkaqjlow61bCS+gxPVyluth++mmTgRC1/dZOAXlEi5ZMNT/4ARBrVI0EBGA&#13;
-shz2+W53rP8qAPPlJwHkqhV3FlosgZ8eIl/KVA==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+  <node componentName="tBonitaDeploy" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="512" posY="128">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tBonitaDeploy_1"/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="BONITA_724"/>
+    <elementParameter field="CLOSED_LIST" name="CLIENT_MODE" value="JAVA_CLIENT"/>
+    <elementParameter field="TEXT" name="BONITA_URL" show="false" value="&quot;http://localhost:8080/bonita&quot;"/>
+    <elementParameter field="DIRECTORY" name="BONITA_HOME" value="&quot;&quot;"/>
+    <elementParameter field="FILE" name="BUSINESS_ARCHIVE" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="USERNAME" value="&quot;&quot;"/>
+    <elementParameter field="PASSWORD" name="PASSWORD" value="enc:system.encryption.key.v1:tlBDWI6qx4ckAZKzZQlQ1aZ7ms5jLzm8lCwlB6oN"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="false"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+  </node>
+  <node componentName="tBonitaInstantiateProcess" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="736" posY="128">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tBonitaInstantiateProcess_2"/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="BONITA_724"/>
+    <elementParameter field="CLOSED_LIST" name="CLIENT_MODE" value="HTTP_CLIENT"/>
+    <elementParameter field="TEXT" name="BONITA_URL" value="&quot;http://localhost:8080/bonita&quot;"/>
+    <elementParameter field="DIRECTORY" name="BONITA_HOME" show="false" value="&quot;&quot;"/>
+    <elementParameter field="CHECK" name="USE_PROCESS_ID" value="false"/>
+    <elementParameter field="TEXT" name="PROCESS_NAME" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="PROCESS_VERSION" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="PROCESS_ID" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="USERNAME" value="&quot;&quot;"/>
+    <elementParameter field="PASSWORD" name="PASSWORD" value="enc:system.encryption.key.v1:CymcJHdH/kdzZLDga1nMwbcLz6UheO6hx4n/n9E2"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="false"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tBonitaInstantiateProcess_2">
+      <column defaultValue="" key="false" length="255" name="ProcessInstanceUUID" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tLDAPAttributesInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="608" posY="256">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tLDAPAttributesInput_1"/>
+    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" show="false" value=""/>
+    <elementParameter field="TEXT" name="HOST" value="&quot;ldap.openldap.org&quot;"/>
+    <elementParameter field="TEXT" name="PORT" value="389"/>
+    <elementParameter field="TEXT" name="BASEDN" value="&quot;dc=OpenLDAP,dc=org&quot;"/>
+    <elementParameter field="CLOSED_LIST" name="PROTOCOL" value="LDAP"/>
+    <elementParameter field="CHECK" name="ADVANCEDCA" show="false" value="false"/>
+    <elementParameter field="FILE" name="STORECA" show="false" value="&quot;c:/mycacerts&quot;"/>
+    <elementParameter field="PASSWORD" name="STORECAPWD" show="false" value="enc:system.encryption.key.v1:OyLoSt4rvZpWYCrQj1KC4qIsCMVjUfaywzXuAr3Q"/>
+    <elementParameter field="CHECK" name="ALWAYS_TRUST" show="false" value="false"/>
+    <elementParameter field="CHECK" name="AUTHENTIFICATION" value="false"/>
+    <elementParameter field="TEXT" name="USER" show="false" value="&quot;cn=Directory Manager&quot;"/>
+    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:9kLHsoiOTJw4uL/m99h7X9qa6/Vgc8WVoh7sezSH9s24mZ58rYo="/>
+    <elementParameter field="CLOSED_LIST" name="ALIASES" value="always"/>
+    <elementParameter field="CLOSED_LIST" name="REFERRALS" value="ignore"/>
+    <elementParameter field="MEMO" name="FILTER" value="&quot;(&amp;(objectClass=*))&quot;"/>
+    <elementParameter field="TEXT" name="MULTI_VALUE_SEPARATOR" value="&quot;;&quot;"/>
+    <elementParameter field="TEXT" name="LIMIT" value="0"/>
+    <elementParameter field="TEXT" name="TIMEOUT" value="0"/>
+    <elementParameter field="CHECK" name="ISPAGING" value="false"/>
+    <elementParameter field="TEXT" name="PAGESIZE" show="false" value="100"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="true"/>
+    <elementParameter field="TEXT" name="CLASSDEF_ROOT" value="&quot;ClassDefinition/&quot;"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tLDAPAttributesInput_1"/>
+    <metadata connector="REJECT" name="REJECT">
+      <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tBonitaDeploy_1"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tBonitaInstantiateProcess_2"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tLDAPAttributesInput_1"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_136e6642-58a8-463a-bbf0-04f635c55629"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>0LStGBT1T16cHGGUo75WJnfb8oKWkhHfimXwQCG3pBGLgG/JE5Y0kGNMo+BO0rGU9kjWRjUrM2VB&#13;
+iA8/2KARcg==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_96fa0e1b-f2ca-40c8-a06e-73e567a34e46"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>1JuzUVQQ8p8YFtx3g4Tc9JBt7yo611C1DiHrnXcQexAmCOvQiM2BF4lpeq14PZZIAGlSj19duXZB&#13;
+JhzNY23Dtg==</DigestValue></Reference></SignedInfo><SignatureValue>Sspwv1nwiT/qRpVaPlM9l+k6bMy8snZHyosG06G0WO1OaAV1i2aUzBn0IDmcML612N3l26tNQ4ke&#13;
+FjTJ+YL9GH7aLtHx5PDM8p75yUpBMFnSSEYF8TeSJzJlBMyud3GXyVohqgpX4G9Fv7qryXQCCO5g&#13;
+GZl0jVj6K3yyEmwLcR7gtBOocXEWweat7xnIlR9zEu4CZBDXbsqUy+IKGVOqe1LU1kFnXjRyqxT3&#13;
+Zdtje0AL2Kdr7cjcpoH4U0lt/v2KV0XEc9W9gahF89uMijwYeWsx+vgZJLPeCtAq3bN1WqRGKBxo&#13;
+EzToN1djRJ5uL/8xGo3c2+D5VrYl+JNI/IYtkQ==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -134,4 +213,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_3b7dada7-8672-4d70-ad84-d65469e215cf" Target="#_9cc8508b-bc1d-4216-b924-45b123ef951f"><Timestamp>2023-11-24 11:30:40</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_96fa0e1b-f2ca-40c8-a06e-73e567a34e46" Target="#_136e6642-58a8-463a-bbf0-04f635c55629"><Timestamp>2023-11-24 11:31:14</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
